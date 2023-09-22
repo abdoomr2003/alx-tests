@@ -4,7 +4,7 @@
  * @s1: string to be compared.
  * @s2: string for comparation.
  * Return: Difference.
- */
+*/
 int _strcmp(char *s1, char *s2)
 {
 	while ((*s1 != '\0' && *s2 != '\0') && *s1 == *s2)
@@ -26,24 +26,24 @@ int _strcmp(char *s1, char *s2)
  * @str: the string to be duplicated
  *
  * Return: pointer to the newly allocated duplicated string
- */
+*/
 char *_strdup(char *str)
 {
-        unsigned int i, l = 0;
-        char *string;
+	unsigned int i, l = 0;
+	char *string;
 
-        if (str == NULL)
-                return (NULL);
-        while (str[l] != '\0')
-                l++;
-        string = malloc((l + 1) * sizeof(char));
+	if (str == NULL)
+		return (NULL);
+	while (str[l] != '\0')
+		l++;
+	string = malloc((l + 1) * sizeof(char));
 
-        if (string == NULL)
-                return (NULL);
-        if (string != NULL)
-                for (i = 0 ; i <= l; i++)
-                        string[i] = str[i];
-        return (string);
+	if (string == NULL)
+		return (NULL);
+	if (string != NULL)
+		for (i = 0 ; i <= l; i++)
+			string[i] = str[i];
+	return (string);
 
 }
 /**
@@ -79,16 +79,13 @@ char *_strcat(char *dest, char *src)
  */
 int _strlen(char *s)
 {
-int i;
+	int i;
 
-        i = 0;
+	i = 0;
+	while (s[i] != '\0')
+		i++;
 
-        while (s[i] != '\0')
-        {
-                i++;
-        }
-
-        return (i);
+	return (i);
 }
 /**
  * *_strcpy - copies the string pointed to by src
@@ -101,20 +98,20 @@ int i;
  */
 char *_strcpy(char *dest, char *src)
 {
-        int len, i;
+	int len, i;
 
-        len = 0;
+	len = 0;
 
-        while (src[len] != '\0')
-        {
-                len++;
-        }
+	while (src[len] != '\0')
+	{
+		len++;
+	}
 
-        for (i = 0; i < len; i++)
-        {
-                dest[i] = src[i];
-        }
-        dest[i] = '\0';
+	for (i = 0; i < len; i++)
+	{
+		dest[i] = src[i];
+	}
+	dest[i] = '\0';
 
-        return (dest);
+	return (dest);
 }

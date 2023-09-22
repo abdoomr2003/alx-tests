@@ -4,7 +4,6 @@
 */
 void handle_exit(void)
 {
-	write(STDOUT_FILENO, "\n", _strlen("\n"));
 	exit(EXIT_SUCCESS);
 }
 /**
@@ -12,7 +11,7 @@ void handle_exit(void)
 */
 void handle_env(void)
 {
-	extern char **environ;
+
 	char **env = environ;
 
 	while (*env)
@@ -22,6 +21,12 @@ void handle_env(void)
 		env++;
 	}
 }
+/**
+ * handle_exist_error - Handle and report a command not found error.
+ * @num_loop: An int represent the loop number.
+ * @command: A ptr to a char str represent the command.
+ * @argv: A ptr to a char str represent the program name.
+*/
 void handle_exist_error(int num_loop, char *command, char *argv)
 {
 	char *ch_loop_num;
