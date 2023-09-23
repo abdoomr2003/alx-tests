@@ -70,13 +70,13 @@ int execute_command(char *command, int num_loop, char **argv)
 	} 
 	else
 	{
-	//     token = strtok(command, " \n");
+	/*//     token = strtok(command, " \n");
 	//     while (token != NULL) {
 	// 	args[arg_count++] = token;
 	// 	token = strtok(NULL, " \n");
 	//     }
 	//     args[arg_count] = NULL;
-
+*/
 	    result = execute_path(args, command);
 	    free(path);
 	    for (i = 0; i < arg_count; i++) free(args[i]);

@@ -38,7 +38,7 @@ int main(int argc, char *argv[])
 				result = execute_command(command, num_loop, argv);
 				if (result == -1)
 					 perror("fork");
-				else
+			
 				
 			}
 		}
